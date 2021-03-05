@@ -1,6 +1,7 @@
 #include "parallelradixsort.h"
  
-void parallelRadixSort(){
+void parallelRadixSort()
+{
     setColor(10);												
     printf("[INFO]: Data(s) sorting started.\n");
     pradixSort(veriler,i);
@@ -37,7 +38,6 @@ void pcountSort(int arr[], int n, int exp)
 {
     int output[n]; // output array
     int i, count[10] = {0};
- 
     for (i = 0; i < n; i++)
     {
     	count[ (arr[i]/exp)%10 ]++;
