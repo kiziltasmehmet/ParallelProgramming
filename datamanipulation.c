@@ -1,6 +1,7 @@
 #include "datamanipulation.h"
 
-void readToFile(){ //Function to read data from file
+void readToFile()//Function to read data from file
+{ 
 	i=0;
 	FILE *fp = fopen(ikinciArguman,"r"); // Open the file
   	int count=0,dV,rV;
@@ -13,20 +14,21 @@ void readToFile(){ //Function to read data from file
   	}
 	else
 	{
-		setColor(10);
+	        setColor(10);
 		printf("[OPERATION]: Loading data(s) from the file.\n");
   		while (!feof(fp)) 
-	    {
-	    	fscanf(fp,"%d",&dV);
-	    	veriler[i] = dV; 
-	    	i++;
- 			count++;
- 	    }
-  		printf("[OPERATION]: Data upload is complete.\n");
-		setColor(6);
-  		if(count < 10000){
+	        {
+	    	    fscanf(fp,"%d",&dV);
+	    	    veriler[i] = dV; 
+	    	    i++;
+ 		    count++;
+ 	        }
+  		    printf("[OPERATION]: Data upload is complete.\n");
+		    setColor(6);
+  		    if(count < 10000)
+		    {
   			printf("[HEURISTIC]: If the number of data is low, this may adversely affect the result.\n");
-		}
+		    }
 	    setColor(15);	
   	}
   	fclose(fp);
