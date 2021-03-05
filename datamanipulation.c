@@ -34,13 +34,15 @@ void readToFile()//Function to read data from file
   	fclose(fp);
 }
 
-void writeToFile(){
+void writeToFile()
+{
 	FILE *fp = fopen(dorduncuArguman, "w");
-  	if (fp == NULL) {
+  	if (fp == NULL)
+	{
   		setColor(79);
-      	printf("[ERROR]: File not found {%s}\n",dorduncuArguman);
-        setColor(15);
-      	exit(1);
+      		printf("[ERROR]: File not found {%s}\n",dorduncuArguman);
+        	setColor(15);
+      		exit(1);
   	}
   	else
   	{
@@ -48,21 +50,24 @@ void writeToFile(){
   		setColor(10);
   		printf("[OPERATION]: Data(s) is being written to the file.\n");
   		setColor(15);
-  		for(j=0; j<i; j++){
+  		for(j=0; j<i; j++)
+		{
   			fprintf (fp,"%d ",veriler[j]);	
 		}
 		setColor(10);	
   		printf("[OPERATION]: Writing to file is complete.\n");
   		setColor(10);
-  }
+  	}
   fclose (fp);
 }
 
 
-void dataWriteConsole(){
+void dataWriteConsole()
+{
  	int j;
  	setColor(8);
-	for(j=0; j<i; j++){
+	for(j=0; j<i; j++)
+	{
 		printf("<%d> ",veriler[j]);
 	}
 	setColor(15);
